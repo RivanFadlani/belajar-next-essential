@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,7 +26,14 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     >
       <body className="flex min-h-full flex-col">
         <header className="bg-white px-6 py-2 font-bold text-black">
-          Ceritanya Navbar
+          <div className="flex justify-between">
+            Ceritanya Navbar
+            <nav className="flex gap-3 font-medium">
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/admin">Admin</Link>
+            </nav>
+          </div>
         </header>
         {children}
       </body>
