@@ -1,14 +1,13 @@
-'use client';
+// SSR / Server Component
+// 1) Pakai server component untuk menggunakan fitur seperti 'data fetching'
 
-import { useState } from 'react';
+import Counter from './counter';
 
 export default function Home() {
-  const [counter, setCounter] = useState(0);
-
   return (
     <div>
-      <p>Count: {counter}</p>
-      <button onClick={() => setCounter(counter + 1)}>Increment</button>
+      <h1>Welcome Home!</h1>
+      <Counter />
     </div>
   );
 }
