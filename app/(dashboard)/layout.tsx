@@ -1,6 +1,9 @@
+// taruh file ini selevel dengan folder (route) yang ingin diberikan layout yang sama
+// sama: layout.tsx ini
+
 import React from 'react';
 
-export default function AdminLayout({
+export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -8,7 +11,7 @@ export default function AdminLayout({
   return (
     <>
       <header className="bg-blue-500 px-6 py-2 font-medium text-white">
-        Ceritanya Navbar Admin
+        Ceritanya Dashboard Nav
       </header>
       {children}
     </>
