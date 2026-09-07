@@ -12,5 +12,8 @@
       "slug": "post-2",
       "content": "Content Post 2"
     }
-  ]
+  ],
+  "settings": {
+    "siteName": "Ripunn Blog"
+  }
 }
