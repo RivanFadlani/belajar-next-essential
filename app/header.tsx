@@ -1,15 +1,5 @@
 import Link from 'next/link';
-
-type Settings = {
-  siteName: string;
-};
-
-async function getSetting(): Promise<Settings> {
-  const response = await fetch('http://localhost:3001/settings');
-  const settings = await response.json();
-
-  return settings;
-}
+import { getSetting } from './types/queries/getSetting';
 
 export default async function Header() {
   const settings = await getSetting();
@@ -23,6 +13,7 @@ export default async function Header() {
         <nav className="flex gap-3 font-medium">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
+          <Link href="/posts">Post</Link>
           <Link href="/admin">Admin</Link>
         </nav>
       </div>

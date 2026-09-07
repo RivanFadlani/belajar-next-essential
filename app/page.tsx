@@ -1,9 +1,14 @@
+import type { Metadata } from 'next';
 // SSR / Server Component
 // 1) Pakai server component untuk menggunakan fitur seperti 'data fetching'
 
 import Image from 'next/image';
 import pixelImg from './../public/asftu.png';
 import Counter from './counter';
+
+export const metadata: Metadata = {
+  title: 'Welcome Page',
+};
 
 export default function Home() {
   return (

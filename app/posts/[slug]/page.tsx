@@ -1,5 +1,18 @@
 import { Post } from '@/app/types/Post';
 import CommentForm from './comment-form';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPost(slug);
+  return {
+    title: post.title,
+  };
+}
 
 async function getPost(slug: string): Promise<Post> {
   const response = await fetch('http://localhost:3001/posts?slug=' + slug);
