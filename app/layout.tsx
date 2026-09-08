@@ -3,7 +3,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
 import Header from './header';
-import { getSetting } from './types/queries/getSetting';
+import { getSetting } from './queries/getSetting';
 
 const fontSans = Inter({
   variable: '--font-inter-sans',
