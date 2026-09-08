@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Nav from './nav';
 import { getSetting } from './queries/getSetting';
 
@@ -8,7 +9,9 @@ export default async function Header() {
     <header className="bg-white px-6 py-2 font-bold text-black">
       <div className="flex justify-between">
         {/*<div>{settings.siteName}</div>*/}
-        <Nav settingPromise={settings} />
+        <Suspense fallback="Loading Euyy ...">
+          <Nav settingPromise={settings} />
+        </Suspense>
       </div>
     </header>
   );
