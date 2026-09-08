@@ -7,6 +7,8 @@ export const metadata: Metadata = {
 };
 
 async function getPosts(): Promise<Post[]> {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const response = await fetch('http://localhost:3001/posts');
   const json = await response.json();
 
